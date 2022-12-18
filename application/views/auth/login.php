@@ -10,7 +10,7 @@
                     <label for="inputEmail3" class="sr-only control-label">Email</label>
                     <input type="text" name="data[username]"
                            value="<?php echo cms_common_input(isset($_post) ? $_post : [], 'username'); ?>"
-                           class="form-control" id="inputEmail3" placeholder="Email/Mã Đăng nhập">
+                           class="form-control" id="inputEmail3" placeholder="Email/Tên Đăng nhập">
                     <i class="fa fa-user icon-right"></i>
                 </div>
                 <div class="form-group input-icon">
@@ -19,7 +19,6 @@
                            value="<?php echo cms_common_input(isset($_post) ? $_post : [], 'password'); ?>"
                            class="form-control" id="inputPassword3" placeholder="Mật khẩu">
                     <i class="fa fa-lock icon-right"></i>
-                    <span>user: admin - pass: 12345678</span>
                 </div>
 
                 <div class="form-group">
@@ -28,17 +27,5 @@
                 </div>
             </form>
         </div>
-    </div>
-
-    <div class="link-action text-center">
-        <div class="col-sm-6 col-xs-12">
-            <a href="authentication/fg_password" style="display:inline-block; margin-top: 5px;" class="fg-passw">Quên
-                mật khẩu</a>
-        </div>
-        <div class="col-sm-6 col-xs-12">
-            <a href="authentication/register" style="display:inline-block; margin-top: 5px;" class="register">Đăng
-                kí</a>
-        </div>
-
     </div>
 </div>

@@ -27,7 +27,7 @@
             <div class="col-md-4 col-md-offset-4">
                 <center style="    font-size: 40px;
     color: #fff;
-    padding-top: 80px;">Quản Lý Bán Hàng Online</center>
+    padding-top: 80px;">Quản Lý Bán Hàng</center>
             </div>
         </div>
     </div>
