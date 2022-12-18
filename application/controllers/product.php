@@ -300,7 +300,7 @@ class Product extends CI_Controller
     public function cms_add_product($store_id)
     {
         $data = $this->input->post('data');
-        $data = $this->cms_common_string->allow_post($data, ['prd_code', 'prd_name', 'prd_sls', 'prd_inventory', 'prd_allownegative', 'prd_origin_price', 'prd_sell_price', 'prd_group_id', 'prd_manufacture_id', 'prd_vat', 'prd_image_url', 'prd_descriptions', 'display_website', 'prd_new', 'prd_hot', 'prd_highlight']);
+        $data = $this->cms_common_string->allow_post($data, ['prd_code', 'prd_name', 'prd_sls', 'prd_inventory', 'prd_allownegative', 'prd_origin_price', 'prd_sell_price', 'prd_group_id', 'prd_manufacture_id', 'prd_vat', 'prd_descriptions', 'display_website', 'prd_new', 'prd_hot', 'prd_highlight']);
         $check_code = $this->db->select('ID')->from('products')->where('prd_code', $data['prd_code'])->get()->row_array();
         if (!empty($check_code) && count($check_code)) {
             echo $this->messages = 'Mã sản phẩm ' . $data['prd_code'] . ' đã tồn tại trong hệ thống. Vui lòng chọn mã khác.';
@@ -359,7 +359,7 @@ class Product extends CI_Controller
     public function cms_update_product($id)
     {
         $data = $this->input->post('data');
-        $data = $this->cms_common_string->allow_post($data, ['prd_code', 'prd_name', 'prd_sls', 'prd_inventory', 'prd_allownegative', 'prd_origin_price', 'prd_sell_price', 'prd_group_id', 'prd_manufacture_id', 'prd_vat', 'prd_image_url', 'prd_descriptions', 'display_website', 'prd_new', 'prd_hot', 'prd_highlight']);
+        $data = $this->cms_common_string->allow_post($data, ['prd_code', 'prd_name', 'prd_sls', 'prd_inventory', 'prd_allownegative', 'prd_origin_price', 'prd_sell_price', 'prd_group_id', 'prd_manufacture_id', 'prd_vat', 'prd_descriptions', 'display_website', 'prd_new', 'prd_hot', 'prd_highlight']);
         $data['user_upd'] = $this->auth['id'];
         $this->db->where('ID', $id)->update('products', $data);
         echo $this->messages = "1";
